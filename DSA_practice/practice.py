@@ -12,7 +12,19 @@ def find_pair_of_number_brute_force(arr,x): # brute force approach  O(n*n) quadr
             if arr[i] + arr[j] == x:
                 return arr[i],arr[j]
             
-
+def find_pair_of_num_using_two_pointer(arr,x): # O(n) liner complexity
+    f = 0
+    b = len(arr)-1
+    while f < b:
+        print(arr[f],arr[b])
+        time.sleep(0.5)
+        sum_ = arr[f] + arr[b]
+        if sum_ == x:
+            return arr[f],arr[b]
+        elif sum_ < x:
+            f += 1
+        else:  # sum_ > x
+            b -= 1
 
         
 
